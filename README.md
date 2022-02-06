@@ -1,5 +1,5 @@
-This is a freeCodeCamp challenge project done within the "Responsive Web Design" course.
+This is my portfolio where you can see my latest projects and learn more about me. 
 
-The live version of the project can be accessed here:
+The live version of it can be accessed here:
 
 https://mira-iskakova.github.io/Elmira-Iskakova-Portfolio/
