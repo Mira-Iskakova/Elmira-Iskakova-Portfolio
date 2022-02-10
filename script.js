@@ -3,13 +3,23 @@ const navSlide = () => {
   const nav = document.querySelector(".menu");
   const menuLinks = document.querySelectorAll(".menu li");
 
-  //Toggle nav
   burger.addEventListener("click", () => {
+    //Toggle nav
     nav.classList.toggle("nav-active");
-  });
-  //Animate links
-  menuLinks.forEach((link, index) => {
-    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 2}s`;
+
+    //Animate links
+    menuLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 1.5
+        }s`;
+      }
+    });
+
+    //Burger animation
+    burger.classList.toggle("toggle");
   });
 };
 
