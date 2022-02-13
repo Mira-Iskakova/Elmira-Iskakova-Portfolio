@@ -168,9 +168,8 @@ section {
   padding: 40px 0;
 }
 
-.about,
-.skills {
-  height: 86vh;
+.about {
+  height: 100vh;
   width: 100%;
   font-family: "Poppins", sans-serif;
 }
@@ -283,106 +282,35 @@ section {
   .about .about-content .right {
     flex: 100%;
   }
-
-  .carousel {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .projects .container {
     width: 100vw;
   }
 }
 
-/* projects section styling */
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* skills section styling */
+.skills {
+  height: 100vh;
+}
+
+.skills .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  min-height: 100vh;
-  overflow: hidden;
-}
-.projects .container {
-  display: flex;
-  height: 80vh;
-  width: 90vw;
+  align-items: center;
+  grid-gap: 3rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem;
 }
 
-.projects .panel {
-  background-image: url(images/product_landing_page.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  flex: 0.5;
-  border-radius: 50px;
-  position: relative;
-  transition: flex 0.5s ease-in;
-  cursor: pointer;
-  margin: 10px;
-  color: #fff;
-}
-
-.panel h3 {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  opacity: 0;
-}
-
-.projects .title {
+.skills .title {
   position: relative;
   text-align: center;
   font-size: 40px;
   font-weight: 500;
   margin-bottom: 60px;
-  margin-top: 20px;
-  padding-bottom: 20px;
-  font-family: "Ubuntu", sans-serif;
-}
-
-.projects .title::before {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 180px;
-  height: 3px;
-  background: #111;
-  transform: translateX(-50%);
-}
-
-.projects .title::after {
-  content: "what i did";
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  padding: 5px;
-  font-size: 20px;
-  color: crimson;
-  background: #fff;
-  transform: translateX(-50%);
-}
-
-.panel.active {
-  flex: 5;
-}
-
-.panel.active h3 {
-  opacity: 1;
-  transition: opacity 0.4s ease-in 0.4s;
-}
-
-/* .skills .title {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 60px;
-  margin-top: 20px;
   padding-bottom: 20px;
   font-family: "Ubuntu", sans-serif;
 }
@@ -405,43 +333,108 @@ section {
   left: 50%;
   padding: 5px;
   font-size: 20px;
-  color: crimson;
+  color: #00003f;
   background: #fff;
   transform: translateX(-50%);
 }
 
-.skills .carousel {
+.skill-title {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-.skills .carousel .card {
-  height: 350px;
-  width: 350px;
-  background: rgba(34, 34, 34, 0.219);
-  border-radius: 6px;
-  padding: 25px 35px;
-  margin: 20px;
-  text-align: center;
+.skill-title h3 {
+  color: #00003f;
 }
 
-.skills .carousel .card .box {
+.skill-title img {
+  height: 100px;
+}
+
+.skill-box {
+  color: #ddd;
+  cursor: pointer;
+}
+
+/* projects section styling */
+.projects {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.projects .container {
+  display: flex;
+  height: 50vh;
+  width: 90vw;
 }
 
-.skills .carousel .card .text {
-  font-size: 25px;
+.projects .panel {
+  background-image: url(images/product_landing_page.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 65vh;
+  flex: 0.5;
+  border-radius: 50px;
+  position: relative;
+  transition: flex 0.5s ease-in;
+  cursor: pointer;
+  margin: 10px;
+  color: #fff;
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.projects .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
   font-weight: 500;
-  margin: 10px 0 7px 0;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.skills .carousel .card img {
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
-  border-radius: 20%;
-  border: 5px solid crimson;
-} */
+.projects .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+
+.projects .title::after {
+  content: "what i did";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  padding: 5px;
+  font-size: 20px;
+  color: #00003f;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.4s ease-in 0.4s;
+}
