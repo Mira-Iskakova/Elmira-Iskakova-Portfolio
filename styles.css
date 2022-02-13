@@ -20,6 +20,7 @@
   padding: 30px 0;
   background: #00003f;
   font-family: "Ubuntu", sans-serif;
+  z-index: 2;
 }
 
 .navbar .max-width {
@@ -35,7 +36,7 @@
 }
 
 .navbar .logo a span {
-  color: crimson;
+  color: #dede3e;
 }
 
 .navbar .menu li {
@@ -51,7 +52,7 @@
 }
 
 .navbar .menu li a:hover {
-  color: crimson;
+  color: #dede3e;
 }
 
 .burger {
@@ -161,3 +162,286 @@
   color: #00003f;
   font-weight: 500;
 }
+
+/* about section styling */
+section {
+  padding: 40px 0;
+}
+
+.about,
+.skills {
+  height: 86vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.about .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.about .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+
+.about .title::after {
+  content: "who i am";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  padding: 5px;
+  font-size: 20px;
+  color: #00003f;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .about-content .left {
+  width: 45%;
+}
+
+.about .about-content .left img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.about .about-content .right {
+  width: 55%;
+}
+
+.about .about-content .right p {
+  text-align: justify;
+}
+
+.about .about-content .right a {
+  display: inline-block;
+  background: #00003f;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #00003f;
+  transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+  color: #00003f;
+  background: none;
+}
+
+/* media queries */
+@media (max-width: 1300px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 947px) {
+  .about .about-content .column {
+    width: 100%;
+  }
+
+  .max-width {
+    max-width: 800px;
+  }
+
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-content .right {
+    flex: 100%;
+  }
+
+  .carousel {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects .container {
+    width: 100vw;
+  }
+}
+
+/* projects section styling */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.projects .container {
+  display: flex;
+  height: 80vh;
+  width: 90vw;
+}
+
+.projects .panel {
+  background-image: url(images/product_landing_page.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  flex: 0.5;
+  border-radius: 50px;
+  position: relative;
+  transition: flex 0.5s ease-in;
+  cursor: pointer;
+  margin: 10px;
+  color: #fff;
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.projects .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.projects .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+
+.projects .title::after {
+  content: "what i did";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  padding: 5px;
+  font-size: 20px;
+  color: crimson;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.4s ease-in 0.4s;
+}
+
+/* .skills .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.skills .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+
+.skills .title::after {
+  content: "what i use";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  padding: 5px;
+  font-size: 20px;
+  color: crimson;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.skills .carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.skills .carousel .card {
+  height: 350px;
+  width: 350px;
+  background: rgba(34, 34, 34, 0.219);
+  border-radius: 6px;
+  padding: 25px 35px;
+  margin: 20px;
+  text-align: center;
+}
+
+.skills .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills .carousel .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.skills .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 20%;
+  border: 5px solid crimson;
+} */
