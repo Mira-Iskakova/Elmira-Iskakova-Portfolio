@@ -5,27 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elmira Iskakova Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
-      <h2 class="logo">Elmira Iskakova</h2>
+      <h2 class="logo">elmira</h2>
+
+      <button class="toggle" aria-expanded="false"></button>
       <nav>
-        <ul>
+        <ul id="navbar" class="navbar" data-visible="false">
           <li><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section id="hero">
         <h1>Learning and Growing every day.</h1>
       </section>
 
-      <section class="about">
+      <section id="about">
         <h2>Hi! I'm Elmira.</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam,
@@ -33,7 +38,7 @@
         </p>
       </section>
 
-      <section class="skills">
+      <section id="skills">
         <h2>What I Use</h2>
         <div class="icons">
           <img src="images/html5.png" alt="html5 icon" />
@@ -45,7 +50,7 @@
         </div>
       </section>
 
-      <section class="projects">
+      <section id="projects">
         <h2>My projects</h2>
         <div class="proj1">
           <a href="">
@@ -68,7 +73,7 @@
         <button>see more</button>
       </section>
 
-      <section class="contact"></section>
+      <section id="contact"></section>
     </main>
 
     <footer>
