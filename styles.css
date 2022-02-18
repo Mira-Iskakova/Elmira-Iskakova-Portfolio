@@ -16,6 +16,13 @@ section {
   height: 100vh;
 }
 
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1.5rem;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -39,15 +46,22 @@ header {
   color: #fff;
 }
 
-.toggle {
-  display: none;
-}
-
 .navbar {
   display: flex;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.7rem;
   font-weight: 500;
+  height: 100vh;
+  position: fixed;
+  inset: 0 0 0 30%;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 2em;
+  padding: min(30vh, 10rem) 2em;
+  background-color: #000;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 350ms ease-out;
 }
 
 .navbar li a {
@@ -60,43 +74,27 @@ header {
   color: #ddd;
 }
 
-@media (max-width: 35em) {
-  .navbar {
-    height: 100vh;
-    position: fixed;
-    inset: 0 0 0 30%;
-    justify-content: space-evenly;
-    flex-direction: column;
-    gap: 2em;
-    padding: min(30vh, 10rem) 2em;
-    background-color: #000;
-    z-index: 1000;
-    transform: translateX(100%);
-    transition: transform 350ms ease-out;
-  }
+.navbar[data-visible="true"] {
+  transform: translateX(0%);
+}
 
-  .navbar[data-visible="true"] {
-    transform: translateX(0%);
-  }
+.toggle {
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  background-color: transparent;
+  background-image: url("images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  width: 2rem;
+  border: 0;
+  aspect-ratio: 1;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
 
-  .toggle {
-    display: block;
-    position: absolute;
-    z-index: 9999;
-    background-color: transparent;
-    background-image: url("images/icon-hamburger.svg");
-    background-repeat: no-repeat;
-    width: 2rem;
-    border: 0;
-    aspect-ratio: 1;
-    top: 2rem;
-    right: 2rem;
-    cursor: pointer;
-  }
-
-  .toggle[aria-expanded="true"] {
-    background-image: url("images/icon-close.svg");
-  }
+.toggle[aria-expanded="true"] {
+  background-image: url("images/icon-close.svg");
 }
 
 /* hero styling */
@@ -119,32 +117,26 @@ header {
   color: #fff;
   border: #fff solid;
   padding: 2rem;
+  margin: 2.5rem;
   backdrop-filter: blur(25px);
   line-height: 1.3;
 }
 
-@media (max-width: 62em) {
-  #hero span {
-    display: block;
-  }
+#hero span {
+  display: block;
 }
 
 /* projects styling */
 #projects {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
-}
-
-#projects .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
+  padding: 6rem 2rem;
+  position: relative;
 }
 
 .proj {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-end;
   height: 28%;
   margin-bottom: 1.5rem;
@@ -222,6 +214,8 @@ header {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   cursor: pointer;
+  position: absolute;
+  bottom: 24px;
 }
 
 #projects .cta a {
@@ -234,83 +228,22 @@ header {
   color: #555;
 }
 
-@media (max-width: 35em) {
-  #projects {
-    height: 100%;
-    padding: 6rem 2rem;
-    position: relative;
-  }
-
-  #projects h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  #projects .cta {
-    position: absolute;
-    bottom: 50px;
-    margin-top: 5rem;
-  }
-
-  .proj {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-}
-
-@media (min-width: 36em) and (max-width: 48em) {
-  #projects {
-    width: 80%;
-    margin: 7rem auto;
-  }
-
-  .proj {
-    height: 16vh;
-  }
-}
-
 /* about styling */
 #about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-#about h2 {
-  font-family: "Josefin Sans", sans-serif;
-  text-transform: uppercase;
+  padding: 7rem 2rem;
 }
 
 #about p {
-  width: 85%;
   text-align: justify;
   font-family: "Alata", sans-serif;
+  font-size: 1.2rem;
   color: rgb(83, 80, 80);
   line-height: 2;
 }
 
-@media (max-width: 35em) {
-  #about {
-    padding: 7rem 2rem;
-  }
-
-  #about img,
-  #about h2,
-  #about p {
-    padding-bottom: 2rem;
-  }
-}
-
 /* skills styling */
-#skills h2 {
-  font-family: "Josefin Sans", sans-serif;
-  text-transform: uppercase;
-}
-
-#skills img {
-  height: 100px;
+#skills {
+  padding: 7rem 2rem;
 }
 
 #skills img:hover {
@@ -342,94 +275,79 @@ header {
   font-family: "Alata", sans-serif;
 }
 
-@media (max-width: 35em) {
-  #skills {
-    padding: 7rem 2rem;
-  }
-
-  #skills h2 {
-    text-align: center;
-  }
-}
-
 /* contact styling */
 #contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact h2 {
-  font-family: "Josefin Sans", sans-serif;
-  text-transform: uppercase;
-}
-
-#contact .container {
-  width: 90%;
-  height: 100%;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border: 2px solid;
+  padding: 7rem 2rem;
 }
 
 #contact form {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  font-weight: bolder;
-  font-size: 1rem;
-  color: #000;
-  font-family: "Alata", sans-serif;
+  margin-top: 3rem;
 }
 
 #contact label {
+  font-family: "Alata", sans-serif;
   font-size: 1.2rem;
-  margin: 0.5rem 0;
+  font-weight: bolder;
 }
 
-#contact input {
-  height: 2rem;
-  font-size: 0.9rem;
-  font-style: italic;
-}
-
+#contact input,
 #contact textarea {
-  font-size: 0.9rem;
   font-style: italic;
-  margin: 0.5rem 0;
+  padding: 0.3rem;
+  font-weight: 500;
+  margin: 1rem 0;
 }
 
 #contact .cta {
-  height: 40px;
-  background-color: #fff;
-  border: #000 2px solid;
+  height: 2.5rem;
   font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
   font-size: 1rem;
   font-weight: bolder;
-  text-transform: uppercase;
+  font-style: normal;
   cursor: pointer;
-  margin-top: 0.5rem;
-}
-
-#contact .cta:hover {
   background-color: #000;
   color: #fff;
   border: #000 1px solid;
 }
 
-@media (max-width: 35em) {
-  #contact {
-    padding: 7rem 2rem;
-  }
+#contact .cta:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* footer styling */
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 35vh;
   background-color: #000;
-  height: 20vh;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+footer a {
   color: #fff;
 }
 
-footer ul li a {
-  color: #fff;
+.left h4 {
+  margin-bottom: 1.5rem;
+}
+
+.left .left-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 16vh;
+}
+
+.right-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
 }
