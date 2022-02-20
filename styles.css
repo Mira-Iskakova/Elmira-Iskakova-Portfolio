@@ -19,8 +19,6 @@ section {
 h2 {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
-  text-align: center;
-  margin: 1.5rem;
 }
 
 img {
@@ -29,16 +27,29 @@ img {
 }
 
 /* navbar styling*/
-.navbar {
+/* .navbar {
   background-color: #000;
+  height: 15vh;
 }
+
+.title {
+  display: flex;
+  align-items: center;
+  height: 12vh;
+}
+
+.title h1 {
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 20px;
+} */
 
 #toggle {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
   background-color: #000;
   cursor: pointer;
   display: flex;
@@ -112,98 +123,6 @@ img {
   font-family: "Josefin Sans", sans-serif;
 }
 
-/* .navbar {
-  background-color: #000;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-}
-
-header .container {
-  border: #000 solid 2px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px 40px;
-}
-
-.nav-link {
-  margin: 20px 0;
-  width: 5rem;
-}
-
-.nav-link a {
-  color: #fff;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.5rem;
-}
-
-.nav-link a:hover,
-.nav-link a:focus {
-  color: #ddd;
-}
-
-.toggle {
-  background: transparent;
-  border: transparent;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.flex-nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-header h1 a {
-  color: #fff;
-  font-family: "Alata", sans-serif;
-  font-size: 1.5rem;
-}
-
-.nav-links {
-  height: 0;
-  overflow: hidden;
-}
-
-.nav-open {
-  height: 100vh;
-}
-
-@media (min-width: 768px) {
-  .toggle {
-    display: none;
-  }
-
-  .nav-header {
-    display: block;
-  }
-
-  .flex-nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-  }
-
-  .nav-links {
-    height: auto;
-  }
-
-  ul {
-    text-align: center;
-  }
-
-  .nav-link {
-    display: inline-block;
-  }
-} */
-
 /* hero styling */
 #hero {
   display: flex;
@@ -237,15 +156,17 @@ header .container {
 #projects {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
-  padding: 6rem 2rem;
+  padding: 0 2rem;
   position: relative;
+
+  border: 1px solid red;
 }
 
 .proj {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 28%;
+  height: 23%;
   margin-bottom: 1.5rem;
   cursor: pointer;
 }
@@ -322,7 +243,7 @@ header .container {
   text-transform: uppercase;
   cursor: pointer;
   position: absolute;
-  bottom: 24px;
+  bottom: 15px;
 }
 
 #projects .cta a {
