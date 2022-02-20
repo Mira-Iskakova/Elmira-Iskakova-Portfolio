@@ -1,14 +1,14 @@
-const navBar = document.querySelector(".navbar");
-const navToggle = document.querySelector(".toggle");
+const toggle = document.getElementById("toggle");
+const sidebar = document.getElementById("sidebar");
 
-navToggle.addEventListener("click", () => {
-  const visibility = navBar.getAttribute("data-visible");
-
-  if (visibility === "false") {
-    navBar.setAttribute("data-visible", true);
-    navToggle.setAttribute("aria-expanded", true);
-  } else if (visibility === "true") {
-    navBar.setAttribute("data-visible", false);
-    navToggle.setAttribute("aria-expanded", false);
+document.onclick = function (e) {
+  if (e.target.id !== "sidebar" && e.target.id !== "toggle") {
+    toggle.classList.remove("active");
+    sidebar.classList.remove("active");
   }
-});
+};
+
+toggle.onclick = function () {
+  toggle.classList.toggle("active");
+  sidebar.classList.toggle("active");
+};

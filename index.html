@@ -10,24 +10,22 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <h2 class="logo"><a href="#">portfolio.</a></h2>
-
-      <button class="toggle" aria-expanded="false"></button>
-      <nav>
-        <ul id="navbar" class="navbar" data-visible="false">
+    <header class="navbar">
+      <div id="toggle"></div>
+      <div id="sidebar">
+        <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
 
     <main>
       <section id="hero">
-        <h1>Learning <span>and Growing </span><span>every day.</span></h1>
+        <h1>Learning <span>every day.</span></h1>
       </section>
 
       <section id="projects">
@@ -54,10 +52,9 @@
         <img src="images/about.jpg" alt="about image" />
         <h2>Hi! I'm Elmira.</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. In,
-          possimus. Earum nam ipsam dicta suscipit corrupti, aut tempore modi
-          quibusdam quos similique. Corporis error, iusto aspernatur eius fuga
-          alias numquam!
+          Hello there! My name is Elmira and I'm a frontend developer (to be
+          full-stack one day) who is extremely passionate about web development.
+          I always actively seek new opportunities to learn and grow.
         </p>
       </section>
 
@@ -99,7 +96,7 @@
       <section id="contact">
         <h2>Let's talk!</h2>
 
-        <div class="container">
+        <div>
           <form action="">
             <label for="fname">First Name</label>
             <input
@@ -133,8 +130,9 @@
 
     <footer>
       <div class="left">
-        <h4>Elmira Iskakova</h4>
-        <ul>
+        <h4>portfolio.</h4>
+
+        <ul class="left-links">
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Skills</a></li>
@@ -144,8 +142,15 @@
       </div>
 
       <div class="right">
-        <a href=""></a>
-        <a href=""></a>
+        <div class="right-links">
+          <a href=""
+            ><img class="socials" src="images/linkedin.svg" alt="LinkedIn logo"
+          /></a>
+          <a href=""
+            ><img class="socials" src="images/github.svg" alt="Github logo"
+          /></a>
+        </div>
+
         <p>&copy 2022 | Elmira Iskakova</p>
       </div>
     </footer>
