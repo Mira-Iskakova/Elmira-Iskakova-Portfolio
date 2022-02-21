@@ -12,8 +12,15 @@ body {
   overflow-x: hidden;
 }
 
+.main-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
 section {
   height: 100vh;
+  scroll-snap-align: start;
 }
 
 h2 {
@@ -596,6 +603,7 @@ footer a {
 
 @media (min-width: 1024px) {
   footer {
+    height: 20vh;
     padding: 12rem;
     font-size: 1.2rem;
   }
