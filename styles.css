@@ -260,6 +260,10 @@ img {
   color: #555;
 }
 
+.text-container {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .proj-container {
     width: 100%;
@@ -273,11 +277,26 @@ img {
     height: 100%;
     width: 90%;
   }
+
+  .text-container {
+    display: grid;
+    margin: 3rem auto;
+  }
+
+  .text-container h3 {
+    margin-bottom: 1rem;
+  }
+
+  .text-container {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
   .proj-container {
+    grid-template-columns: auto auto auto;
     width: 90%;
+    height: 60%;
   }
 
   #projects .title {
@@ -287,6 +306,13 @@ img {
 
   #projects h2 {
     font-size: 2.5rem;
+  }
+
+  .text-container {
+    display: flex;
+    grid-template-columns: auto auto auto;
+    width: 90%;
+    height: 30%;
   }
 }
 
@@ -426,13 +452,15 @@ img {
 
 /* contact styling */
 #contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 2rem 2rem;
 }
 
 #contact form {
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
 }
 
 #contact label {
@@ -472,6 +500,10 @@ img {
     width: 50%;
     margin: 0 auto;
   }
+
+  #contact form {
+    margin-top: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -491,7 +523,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
   height: 40vh;
   background-color: #000;
   color: #fff;
@@ -514,9 +546,16 @@ footer a {
   height: 16vh;
 }
 
+.right {
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .right-links {
   display: flex;
-  justify-content: space-evenly;4
+  justify-content: space-evenly;
 }
 
 .socials {
@@ -532,22 +571,40 @@ footer a {
     font-size: 1rem;
   }
 
+  .right {
+    height: 8rem;
+  }
+
+  .right p {
+    margin-bottom: 2rem;
+  }
+
+  .left {
+    height: 8rem;
+  }
+
   .left .left-links {
     flex-direction: row;
+    padding: 0;
+    margin: 0;
   }
 
   .left-links li a {
     margin-right: 0.5rem;
-  } 
+  }
+}
 
-  .right {
-    
-
-
-    border: solid;
+@media (min-width: 1024px) {
+  footer {
+    padding: 12rem;
+    font-size: 1.2rem;
   }
 
-  .left {
-    border: solid;
+  .right-links img {
+    height: 1.5rem;
+  }
+
+  .left-links li a {
+    margin-right: 1rem;
   }
 }
