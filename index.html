@@ -155,10 +155,7 @@
         <h2>Let's talk!</h2>
 
         <div>
-          <form
-            action="https://formsubmit.co/miraiskakova19@gmail.com"
-            method="POST"
-          >
+          <form action="POST" data-netlify="true">
             <label for="fname">First Name</label>
             <input
               type="text"
@@ -191,6 +188,10 @@
               placeholder="Write something.."
               style="height: 200px"
             ></textarea>
+
+            <div class="field">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
 
             <input class="cta" type="submit" value="Send" />
           </form>
