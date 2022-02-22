@@ -493,7 +493,7 @@ img {
 @media (min-width: 768px) {
   #contact {
     width: 50%;
-    margin: 0 auto;
+    margin: 30vh auto;
   }
 
   #contact form {
@@ -519,7 +519,7 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 40vh;
+  height: 30vh;
   background-color: #000;
   color: #fff;
   font-size: 0.8rem;
@@ -530,7 +530,7 @@ footer a {
 }
 
 .left h4 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .left .left-links {
@@ -538,11 +538,11 @@ footer a {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 16vh;
+  height: 12vh;
 }
 
 .right {
-  height: 4rem;
+  height: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -562,20 +562,19 @@ footer a {
   footer {
     flex-direction: row;
     justify-content: space-between;
-    padding: 4rem;
     font-size: 1rem;
   }
 
   .right {
-    height: 8rem;
+    height: 3rem;
   }
 
   .right p {
-    margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 
   .left {
-    height: 8rem;
+    height: 3rem;
   }
 
   .left .left-links {
@@ -591,8 +590,8 @@ footer a {
 
 @media (min-width: 1024px) {
   footer {
-    height: 20vh;
-    padding: 12rem;
+    height: 30vh;
+    padding: 2rem;
     font-size: 1.2rem;
   }
 
