@@ -483,6 +483,7 @@ img {
   background-color: #000;
   color: #fff;
   border: #000 1px solid;
+  margin-top: 2.5rem;
 }
 
 #contact .cta:hover {
