@@ -12,15 +12,8 @@ body {
   overflow-x: hidden;
 }
 
-.main-container {
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
-
 section {
   height: 100vh;
-  scroll-snap-align: start;
 }
 
 h2 {
@@ -183,7 +176,7 @@ img {
 }
 
 .proj1 {
-  background-image: url(images/product_landing_page.png);
+  background-image: url(images/landing-page.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -191,14 +184,14 @@ img {
 
 .proj1:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/product_landing_page.png);
+    url(images/landing-page.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .proj2 {
-  background-image: url(images/landing-page.png);
+  background-image: url(images/pong.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -206,14 +199,14 @@ img {
 
 .proj2:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/landing-page.png);
+    url(images/pong.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .proj3 {
-  background-image: url(images/1.png);
+  background-image: url(images/calculator.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -221,7 +214,7 @@ img {
 
 .proj3:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/1.png);
+    url(images/calculator.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -267,7 +260,7 @@ img {
   color: #555;
 }
 
-.text-container {
+.text {
   display: none;
 }
 
@@ -285,16 +278,7 @@ img {
     width: 90%;
   }
 
-  .text-container {
-    display: grid;
-    margin: 3rem auto;
-  }
-
-  .text-container h3 {
-    margin-bottom: 1rem;
-  }
-
-  .text-container {
+  .text {
     display: none;
   }
 }
@@ -302,8 +286,9 @@ img {
 @media (min-width: 1024px) {
   .proj-container {
     grid-template-columns: auto auto auto;
+    grid-template-rows: 65% 65% 65%;
     width: 90%;
-    height: 60%;
+    height: 100%;
   }
 
   #projects .title {
@@ -315,11 +300,14 @@ img {
     font-size: 2.5rem;
   }
 
-  .text-container {
+  .text {
     display: flex;
+    flex-direction: column;
     grid-template-columns: auto auto auto;
     width: 90%;
-    height: 30%;
+    height: auto;
+    text-transform: none;
+    font-family: "Alata", sans-serif;
   }
 }
 
